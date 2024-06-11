@@ -45,7 +45,7 @@ const RegisterPage = () => {
               />
             </div>
             <div className="form-control mt-6">
-              <button className="btn btn-primary">Login</button>
+              <button className="btn btn-primary">Register</button>
             </div>
             <div className="space-y-2 mt-4">
 			<p className="px-6 text-sm text-center dark:text-gray-600">have an account yet?

@@ -47,7 +47,7 @@ const LoginPage = () => {
               <button className="btn btn-primary">Login</button>
             </div>
             <div className="space-y-2 mt-4">
-			<p className="px-6 text-sm text-center dark:text-gray-600">Don't have an account yet?
+			<p className="px-6 text-sm text-center dark:text-gray-600">Don`t have an account yet?
 				<Link to='/register' rel="noopener noreferrer" className="hover:underline text-violet-600">Sign up</Link>.
 			</p>
 		</div>
