@@ -17,6 +17,7 @@ const Navbar = () => {
             </Box>
             <HStack spacing="28px">
                 <Link as={RouterLink} to="/" fontWeight="bold">Home</Link>
+                <Link as={RouterLink} to="/sale-orders" fontWeight="bold">Order</Link>
                 {
                     user ? <button onClick={logOut} className="btn btn-primary">Logout</button> : 
                         <>
