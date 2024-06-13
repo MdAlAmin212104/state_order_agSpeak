@@ -24,27 +24,27 @@ const AuthProvider = ({children}) => {
 
 
     const logOut = () => {
-        setLoading(true);
-        return signOut(auth)
+      setLoading(true);
+      return signOut(auth)
     }
     useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, currentUser => {
-            setLoading(false);
-            setUser(currentUser)
-        })
+      const unsubscribe = onAuthStateChanged(auth, currentUser => {
+        setLoading(false);
+        setUser(currentUser)
+      })
 
-        return () => {
-            unsubscribe();
-        }
+      return () => {
+        unsubscribe();
+      }
     }, []);
 
     const userInfo = {
-        singInWithEmailPassword,
-        singUpWithEmailPassword, 
-        user,
-        logOut,
-        loading,
-  }
+      singInWithEmailPassword,
+      singUpWithEmailPassword, 
+      user,
+      logOut,
+      loading,
+    }
 
 
   return (

@@ -5,14 +5,14 @@ import { useQuery } from "@tanstack/react-query";
 const useData = () => {
     const axiosPublic = useAxios()
 
-    const { data: products = [] } = useQuery({
+    const { data: products = [], refetch } = useQuery({
         queryKey: ["products"],
         queryFn: async () => {
             const res = await axiosPublic.get(`/orders`);
             return res.data;
         },
     });
-    return [products];
+    return [products, refetch];
 };
 
 export default useData;

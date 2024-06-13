@@ -4,8 +4,9 @@ import { EditIcon } from '@chakra-ui/icons';
 import SaleOrderForm from './SaleOrderForm';
 
 const SaleOrderTable = ({ orders }) => {
-  const [selectedOrder, setSelectedOrder] = useState(null);
+  const [selectedOrder, setSelectedOrder] = useState(orders);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  
 
   const openModal = (order) => {
     setSelectedOrder(order);
@@ -13,7 +14,7 @@ const SaleOrderTable = ({ orders }) => {
   };
 
   const closeModal = () => {
-    setSelectedOrder(null);
+    setSelectedOrder
     setIsModalOpen(false);
   };
 
@@ -31,7 +32,7 @@ const SaleOrderTable = ({ orders }) => {
         </Thead>
         <Tbody>
           {orders.map((order, idx) => (
-            <Tr key={order.invoice_no}>
+            <Tr key={idx}>
                 <Td>{idx + 1}</Td>
                 <Td>{order.customer_name}</Td>
                 <Td>{order.price}</Td>
